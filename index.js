@@ -49,9 +49,10 @@ function bindAudioEvent(target,list){
         for(var i=step;i<length;i++){
             if(list[i].data.beginTime < e.timeStamp + 100){
                 step ++;
-                list[i].ele.className = list[i].ele.className + ' current';
+                list[i].ele.className = 'current';
                 if(list[i-1]){
-                    list[i-1].ele.className = list[i-1].ele.className + ' end';
+                    list[i-1].ele.className = 'end';
+                    list[i-1].ele.innerHTML = list[i-1].ele.innerHTML.replace(/transition[^?;]+;/g,function(ret){return 'off~' + ret})
                 }
             }
         }
