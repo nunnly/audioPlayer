@@ -1,0 +1,38 @@
+body,html{padding: 0;margin:0;}
+.lyrics{
+    list-style: none;
+    text-align: center;
+    line-height: 1.5;
+    background-image:-webkit-linear-gradient(90deg, #274535 0%, #190530 100%);
+    background-attachment:fixed;
+    color:rgba(255,255,255, 0.5);
+}
+
+.lyrics .line{
+    line-height: 62px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-block;
+}
+.lyrics .read{
+    position: absolute;
+    display: inline-block;
+    text-align: left;
+    left:0;
+    top:0;
+    width:0;
+    color:#fff;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.lyrics .current .line .read{
+    width:100%;
+};
+.lyrics .end .line .read{
+    width:100%;
+};
+.lyrics .active .read{
+    width:100%;
+};
